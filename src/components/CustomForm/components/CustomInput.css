@@ -1,0 +1,89 @@
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 3fr; 
+    /* Ajusta el grid-gap si lo deseas */
+    grid-gap: 10px;
+  
+    /* Para que podamos posicionar el mensaje de error en 
+       modo absoluto dentro de este contenedor */
+    position: relative;
+  
+    /* Este margen inferior reserva espacio para el mensaje 
+       de error sin desplazar el siguiente .form-group */
+    margin-bottom: 50px; /* Ajusta según la altura que necesites */
+  }
+  
+  /* Etiquetas */
+  .form-group label {
+    grid-column: 1;
+    align-self: center;
+    text-align: left;
+    font-weight: bold;    
+    padding-top: 5px;
+  }
+  
+  /* Inputs */
+  .form-control {
+    grid-column: 2;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+    /* Retiramos márgenes en el input para evitar doble espaciado */
+    margin-bottom: 0;
+  }
+  
+  /* Efecto al enfocar */
+  .form-control:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Campos con error */
+  .form-control.is-invalid {
+    border-color: #f00;
+    background-color: #fce4ec;
+  }
+  
+  /* Contenedor de errores: lo posicionamos de forma absoluta 
+     para que no empuje al resto del contenido */
+  .error-container {
+    position: absolute;
+    grid-column: 2;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  
+  /* Estilo del texto de error */
+  .error {
+    color: #f00;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  /* Espaciado entre párrafos de error si los hay */
+  .error p {
+    margin-bottom: 10px;
+  }
+  
+  /* Responsivo: 1 columna en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .form-group {
+      grid-template-columns: 1fr;
+      margin-bottom: 60px; /* Asegura espacio para el error en móviles */
+    }
+  
+    .form-group label,
+    .form-control,
+    .error-container {
+      grid-column: 1;
+    }
+  }
+  
