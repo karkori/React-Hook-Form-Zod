@@ -11,8 +11,8 @@ Este proyecto es un formulario validado utilizando **React Hook Form** y **Zod**
 ## 🚀 Instalación y Configuración
 ### 1️⃣ Clonar el repositorio
 ```bash
-  git clone https://github.com/tu-repo.git
-  cd tu-repo
+  git clone https://github.com/karkori/React-Hook-Form-Zod
+  cd React-Hook-Form-Zod
 ```
 
 ### 2️⃣ Instalar dependencias
